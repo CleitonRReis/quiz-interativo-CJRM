@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Quiz - Harry Potter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Quiz - Harry Potter</h1>
+    </div>
+
+    <div class="quiz">
+        <div class="container">
+            <h2>Você consegue acertar essas perguntas sobre a saga Harry Potter?</h2>
+
+            <form class="quiz-form">
+                <div class="question">
+                    <p>1 - Que feitiço Harry usou para matar Lord Voldemort?</p>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion1" value="A" checked>
+                            Expelliarmus
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion1" value="B">
+                            Patronum Expecto
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2 - Na primeira reunião do Clube de Duelo, Draco Malfoy invocou qual animal com o feitiço
+                        'Serpensortia'?</p>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion2" value="A" checked>
+                            Serpente
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion2" value="B">
+                            Dragão
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3 - “É Levi-O-sa, não…”</p>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion3" value="A" checked>
+                            Levi-o-SA
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion3" value="B">
+                            LEVI-o-sa
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4 - O feitiço 'Felifors' transforma um gato em um quê?</p>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion4" value="A" checked>
+                            Chapéu
+                        </label>
+                    </div>
+
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="inputQuestion4" value="B">
+                            Caldeirão
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="quiz-modal">
+        <div class="modal">
+            <p>Você acertou <span>0%</span> do quiz Harry Potter</p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
