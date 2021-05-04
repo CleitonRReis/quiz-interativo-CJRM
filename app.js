@@ -1,41 +1,45 @@
 const form = document.querySelector('.quiz-form');
-const finalResult = document.querySelector('.result');
+const span = document.querySelector('span');
+const modal = document.querySelector('.quiz-modal');
+const corectOptions = ['B', 'B', 'B', 'B'];
 
-const correctAnswer = ['B', 'B', 'B', 'B'];
+const timerOut = () => {
+    setTimeout(() => {
+        modal.classList.remove('show-modal');
+    }, 2500);
+};
 
 form.addEventListener('submit', event => {
     event.preventDefault();
 
-    let score = 0;
-
-    const valueForm = [
+    const options = [
         form.inputQuestion1.value,
         form.inputQuestion2.value,
         form.inputQuestion3.value,
         form.inputQuestion4.value
     ];
 
-    valueForm.forEach((answer, index) => {
-        if (answer === correctAnswer[index]) {
+    let score = 0;
+
+    options.forEach((option, index) => {
+        if (option === corectOptions[index]) {
             score += 25;
         };
     });
-    
-    scrollTo(0, 0);
 
-    finalResult.classList.remove('d-none');
+    modal.classList.add('show-modal');
+
+    scrollTo(0, 0);
 
     let counter = 0;
 
-    const timer = setInterval(() => {
+    let timer = setInterval(() => {
         if (counter === score) {
             clearInterval(timer);
-        }
-        finalResult.querySelector('span').textContent = `${counter}%`;
-        counter++;
-    }, 10);
-});
+        };
 
-setTimeout(()=> {
-    console.log('Um segundo e meio se passaram desde que a página foi carregada');
-}, 1500);
+        span.textContent = `${counter++}%`;
+    }, 10);
+
+    timerOut();
+});
