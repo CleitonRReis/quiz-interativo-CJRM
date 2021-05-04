@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    background-color: rgb(46, 5, 70);
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 5, 54);
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    max-width: 1200px;
+    color: #fff;
+    margin-top: 80px;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.question{
+    color: #fff;
+    justify-content: left;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.option {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: ease .2s;
+    box-shadow:  5px 5px 30px #38098f;
+}
+
+.btn:hover {
+    background-color: rgb(195, 206, 248);
+}
+
+
+.quiz-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-modal.show-modal {
+    display: flex;
+}
+
+.modal {
+    background: linear-gradient(145deg, #e5b3fd, #c196d4);
+    box-shadow:  2px 2px 10px #b68ec9;
+    width: 60%;
+    height: 30%;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.show-modal .modal {
+    animation: modal .5s;
+}
+
+span {
+    font-size: 50px;
+    color: rgb(28, 5, 54);
+    margin: 20px;
+}
